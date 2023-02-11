@@ -13,6 +13,7 @@ public class OrderRepository {
     private HashMap<String , List<String> > orderPartnerPairHashMap=new HashMap<>();
     private HashMap<String,Boolean> orderAssignStatus=new HashMap<>();
 
+
     public void addOrder(Order order){
         if(order==null) return;
         orderAssignStatus.put(order.getId(),false);
