@@ -103,7 +103,14 @@ public class OrderRepository {
         }
         int mm=max%60;
         int hh=max/60;
-        return hh+":"+mm;
+        String h=""+hh,m=""+mm;
+        if(hh<10){
+           h="0"+hh;
+        }
+        if(mm<10){
+            m="0"+mm;
+        }
+        return h+":"+m;
     }
     public void deletePartnerById(String id){
         List<String> lst=orderPartnerPairHashMap.get(id);
