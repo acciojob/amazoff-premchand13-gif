@@ -14,6 +14,7 @@ public class OrderRepository {
     private HashMap<String,Boolean> orderAssignStatus=new HashMap<>();
 
     public void addOrder(Order order){
+        if(order==null) return;
         orderAssignStatus.put(order.getId(),false);
         orderHashMap.put(order.getId(),order);
     }
